@@ -1,0 +1,31 @@
+{
+  "name": "ant-test-3",
+  "version": "0.0.1",
+  "description": "Websocket connection tests with and without browser.",
+  "main": "page.html",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "d3": "^4.9.1",
+    "jquery": "^3.2.1",
+    "websocket": "^1.0.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "page.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vertighel/ant-test-3.git"
+  },
+  "keywords": [
+    "ws",
+    "test",
+    "node"
+  ],
+  "author": "Davide Ricci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vertighel/ant-test-3/issues"
+  },
+  "homepage": "https://github.com/vertighel/ant-test-3#readme"
+}

@@ -1,0 +1,86 @@
+{    
+    
+    "actor" :
+    {
+	"list"             : ["websocket_server", "telescope_observer", "dummy_1", "dummy_2"],
+	"prop"             : [
+	    {
+   		"name"         : "websocket_server",
+		"ip"           : "snoopy.local",
+		"port"         : 1234,
+		"title"        : "Websocket server",
+		"description"  : "Recieves the messages and dispatch them to the other actors."
+	    },
+	    
+	    {
+		"name"         : "telescope_observer",
+		"webpage"      : "./page.html",
+		"title"        : "Telescope observer",
+		"description"  : "Connects to the Websocket server using a browser."
+	    },		     
+	    
+	    {
+		"name"         : "external_observer",
+		"webpage"      : "./page.2.html",
+		"title"        : "External observer",
+		"description"  : "Cannot send messages. "
+	    },		     
+
+	    {	     
+		"name"         : "dummy_1",
+		"title"        : "Dummy actor n°1",
+		"description"  : "It simulates an actor."
+	    },		     
+	    
+	    {	     
+		"name"         : "dummy_2",
+		"title"        : "Dummy actor n°2",
+		"description"  : "It simulates an actor."
+	    }
+	],
+	"title"       : "Actors of the observatory",
+	"description" : "It contains a list of all actors exchanging messages."
+	
+    },
+    
+    "fits" : {
+	"dir"         : "./mnt/fits/",
+	"title"       : "FITS parameters",
+	"description" : "Where FITS files are stored."	
+    },
+    
+    "png" : {
+	"dir"         : "./mnt/png/",
+	"cuts"        : [11000,40000],
+	"title"       : "PNG images parameters",
+	"description" : "dir: png file directory; cuts: 0=min,65535=max, [11000,40000] for 25s exposure; ]."
+    },
+    
+
+    "form" :{
+
+	"etc" : {
+	    "temp": { "prop": { "type":"number", "value":5000 }, "label": "Temperature [K]", "attr": {"min":1000, "max":15000,"step":1000} },
+	    "powr": { "prop": { "type":"number", "value":1    }, "label": "Index",           "attr": {"min":1,    "max":4,    "step":1   } },
+	    "usrf": { "prop": { "type":"file",   "value":null }, "label": "User defined",    "attr": {}                              },
+	    "m":    { "prop": { "value":10  },                   "label": "Magnitude",       "attr": {"min":-14,  "max":30,   "step":0.1}  },
+	    "z":    { "prop": { "value":0   },        "label": "Redshift",        "attr": {"min":0,    "max":12,   "step":0.01} },
+	    "airmass": { "prop":{ "value":0   },      "label": "Airmass",         "attr": {"min":0,    "max":5,    "step":0.1}  },
+	    "seeing":  { "prop":{ "value":0.5 },      "label": "Seeing",          "attr": {"min":0.1,  "max":5.0,  "step":0.1}  },
+	    "primary": { "prop":{ "value":0.8 },      "label": "Diameter [m]",    "attr": {"min":0.1,  "max":10,   "step":0.1}  },
+	    "platescale": { "prop":{ "value":0.10 },  "label": "Plate Scale [arcsec/px]", "attr": {"min":0.01, "max":3.0, "step":0.01} }
+	},
+
+	"example" : {
+	    "num1": { "prop": { "type":"number", "value":1.2 }, "label": "Num 1", "title":"First number",   "attr": {"min":1, "max":10,"step":0.2} },
+	    "num2": { "prop": { "type":"number", "value":1.4 }, "label": "Num 2", "title":"Second number",  "attr": {"min":1, "max":10,"step":0.2} },
+	    "txt" : { "prop": { "type":"text",   "value":"asd"}, "label": "Text",  "title":"Some text",      "attr": {}                             }
+	},
+	
+	"title"       : "Form defaults",
+	"description" : "Default values, min, max, placeholder of each form component"
+    },
+    
+    "title"           : "Configuration file",
+    "description"     : "Stores all the configuration parameters."
+}
