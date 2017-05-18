@@ -28,15 +28,10 @@
 
 	    {	     
 		"name"         : "dummy_1",
-		"title"        : "Dummy actor n°1",
+		"title"        : "Dummy actor",
 		"description"  : "It simulates an actor."
-	    },		     
-	    
-	    {	     
-		"name"         : "dummy_2",
-		"title"        : "Dummy actor n°2",
-		"description"  : "It simulates an actor."
-	    }
+	    }		     
+
 	],
 	"title"       : "Actors of the observatory",
 	"description" : "It contains a list of all actors exchanging messages."

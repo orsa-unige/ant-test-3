@@ -79,28 +79,28 @@ ws.addEventListener("message", function(e) {
     console.log(obj) /// Look in the browser console
 
 // Let's add some style to these informations!
+	$("h2 em").text(obj.actor.title) /// it will change depending from the actor
+	$("h3 em").text(obj.connection.id) /// it will change depending from the actor
+	$("aside").text(obj.actor.description)    	
 
     switch (obj.actor.name){ /// Depending from the actor, I do several things
     case "dummy_1": 
     case "dummy_2":
-
-	$("h2 em").text(obj.actor.title) /// it will change depends from the actor
-	$("aside").text(obj.actor.description)    	
 	var li= d3.select("ul") /// Some d3! I select the <ul> 
 	    .selectAll("li") /// They will be dinamically created 
 	    .data(obj.randomnumbers) /// I bind the data to the future <li>
 	li.text(function(d){return d})	/// on update the value will change
 	li.enter().append("li") /// It will append two new <li> (xx and yy) 
-	li.exit().remove() /// it will remove the old ones.
-	
+	li.exit().remove() /// it will remove the old ones.	
 	// $.each(obj.randomnumbers, function(i){
 	//     $("ul").append("li").text(i)
 	// })
 	break;
 
     case "telescope_observer":
- 	$("h2 em").text(obj.actor.title) /// it will change depends from the actor
-	$("aside").text(obj.actor.description)    	
+ 	// $("h2 em").text(obj.actor.title) /// it will change depends from the actor
+ 	// $("h2 em").text(obj.connection.id) /// it will change depends from the actor
+	// $("aside").text(obj.actor.description)    	
 	$("div").prepend(JSON.stringify(obj)+'<br>')
 	
 	break;

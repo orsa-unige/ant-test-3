@@ -42,6 +42,11 @@ ws.on('request', function(r){                   /// Listen connections
 
 	var msgobject = JSON.parse(msgstring, null, 2)
 
+	/// Let's add some connection info to the json
+	msgobject.connection = {}
+	msgobject.connection.ip = connection.remoteAddress
+	msgobject.connection.id = id
+	
 	/// [...] here we manipulate msgobject which is a js object
 	
 	for(var i in clients)

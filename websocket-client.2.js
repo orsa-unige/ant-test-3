@@ -6,6 +6,7 @@ var wsclient = require('websocket').client; /// Create a websocket client
  
 var client = new wsclient();
 
+var prompt = require('prompt');
 
 /// Let's create an object where we will put the random number.
 var mess={}
@@ -36,21 +37,44 @@ client.on('connect', function(connection) {
             console.log("Received: '" + message.utf8Data + "'");
         }
     });
-    
+
+
     function sendNumbers() {
-        if (connection.connected) {
+	
+	
+	//
+	// Start the prompt
+	//
+	prompt.start();
+	
+	//
+	// Get two properties from the user: username and email
+	//
+	prompt.get(['username', 'email'], function (err, result) {
+	    //
+	    // Log the results.
+	    //
+	    console.log('Command-line input received:');
+	    console.log('  username: ' + result.username);
+	    console.log('  email: ' + result.email);
+	
+	    connection.sendUTF(JSON.stringify(result));
 
-	    /// I create a pair or random data.
-            var xx = Math.round(Math.random() * 0xFFFFFF);
-            var yy = Math.round(Math.random() * 0xFFFFFF);	  
-	    	    
-	    /// I append the random number to the json    
-	    //mess.randomnumbers.push({x:xx, y:yy}) /// This adds a pair every loop
-		mess.randomnumbers =[xx, yy]
 
-	    connection.sendUTF(JSON.stringify(mess));
-            setTimeout(sendNumbers, 3000);
-        }
+	});
+	
+	// function sendNumbers() {
+	//     if (connection.connected) {
+	
+	// 	    /// I create a pair or random data.
+	//         var xx = Math.round(Math.random() * 0xFFFFFF);
+	//         var yy = Math.round(Math.random() * 0xFFFFFF);	  
+	
+	// 	    /// I append the random number to the json    
+	// 	    //mess.randomnumbers.push({x:xx, y:yy}) /// This adds a pair every loop
+	// 		mess.randomnumbers =[xx, yy]
+	//            setTimeout(sendNumbers, 2000);
+
     }
 
     sendNumbers();
