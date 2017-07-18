@@ -38,7 +38,7 @@ npm -f install
 On Debian-based distributions:
 
 ```bash
-sudo apt-get install
+sudo apt-get install ruby
 sudo su -c "gem install sass"
 ```
 
