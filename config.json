@@ -6,7 +6,7 @@
 	"prop"             : [
 	    {
    		"name"         : "websocket_server",
-		"ip"           : "snoopy.local",
+		"ip"           : "localhost",
 		"port"         : 1234,
 		"title"        : "Websocket server",
 		"description"  : "Recieves the messages and dispatch them to the other actors."
