@@ -21,6 +21,12 @@ npm -v
 
 ```
 
+On Mac, add the following line in `.bash_profile`:
+
+```bash
+source ~/.nvm/nvm.sh
+```
+
 # Clone this repository
 
 ```bash

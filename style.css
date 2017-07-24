@@ -609,42 +609,42 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, body {
+.container, main {
   position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px; }
   @media (min-width: 576px) {
-    .container, body {
+    .container, main {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 768px) {
-    .container, body {
+    .container, main {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 992px) {
-    .container, body {
+    .container, main {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 1200px) {
-    .container, body {
+    .container, main {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 576px) {
-    .container, body {
+    .container, main {
       width: 540px;
       max-width: 100%; } }
   @media (min-width: 768px) {
-    .container, body {
+    .container, main {
       width: 720px;
       max-width: 100%; } }
   @media (min-width: 992px) {
-    .container, body {
+    .container, main {
       width: 960px;
       max-width: 100%; } }
   @media (min-width: 1200px) {
-    .container, body {
+    .container, main {
       width: 1140px;
       max-width: 100%; } }
 
@@ -2897,7 +2897,7 @@ tbody.collapse.show {
   .navbar-toggleable .navbar-nav .dropdown-menu {
     position: static;
     float: none; }
-  .navbar-toggleable > .container, .navbar-toggleable > body {
+  .navbar-toggleable > .container, .navbar-toggleable > main {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 576px) {
@@ -2910,7 +2910,7 @@ tbody.collapse.show {
       .navbar-toggleable .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-toggleable > .container, .navbar-toggleable > body {
+    .navbar-toggleable > .container, .navbar-toggleable > main {
       display: flex;
       flex-wrap: nowrap;
       align-items: center; }
@@ -2923,7 +2923,7 @@ tbody.collapse.show {
   .navbar-toggleable-sm .navbar-nav .dropdown-menu {
     position: static;
     float: none; }
-  .navbar-toggleable-sm > .container, .navbar-toggleable-sm > body {
+  .navbar-toggleable-sm > .container, .navbar-toggleable-sm > main {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 768px) {
@@ -2936,7 +2936,7 @@ tbody.collapse.show {
       .navbar-toggleable-sm .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-toggleable-sm > .container, .navbar-toggleable-sm > body {
+    .navbar-toggleable-sm > .container, .navbar-toggleable-sm > main {
       display: flex;
       flex-wrap: nowrap;
       align-items: center; }
@@ -2949,7 +2949,7 @@ tbody.collapse.show {
   .navbar-toggleable-md .navbar-nav .dropdown-menu {
     position: static;
     float: none; }
-  .navbar-toggleable-md > .container, .navbar-toggleable-md > body {
+  .navbar-toggleable-md > .container, .navbar-toggleable-md > main {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 992px) {
@@ -2962,7 +2962,7 @@ tbody.collapse.show {
       .navbar-toggleable-md .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-toggleable-md > .container, .navbar-toggleable-md > body {
+    .navbar-toggleable-md > .container, .navbar-toggleable-md > main {
       display: flex;
       flex-wrap: nowrap;
       align-items: center; }
@@ -2975,7 +2975,7 @@ tbody.collapse.show {
   .navbar-toggleable-lg .navbar-nav .dropdown-menu {
     position: static;
     float: none; }
-  .navbar-toggleable-lg > .container, .navbar-toggleable-lg > body {
+  .navbar-toggleable-lg > .container, .navbar-toggleable-lg > main {
     padding-right: 0;
     padding-left: 0; } }
 @media (min-width: 1200px) {
@@ -2988,7 +2988,7 @@ tbody.collapse.show {
       .navbar-toggleable-lg .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-toggleable-lg > .container, .navbar-toggleable-lg > body {
+    .navbar-toggleable-lg > .container, .navbar-toggleable-lg > main {
       display: flex;
       flex-wrap: nowrap;
       align-items: center; }
@@ -3004,7 +3004,7 @@ tbody.collapse.show {
   .navbar-toggleable-xl .navbar-nav .dropdown-menu {
     position: static;
     float: none; }
-  .navbar-toggleable-xl > .container, .navbar-toggleable-xl > body {
+  .navbar-toggleable-xl > .container, .navbar-toggleable-xl > main {
     padding-right: 0;
     padding-left: 0; }
   .navbar-toggleable-xl .navbar-nav {
@@ -3012,7 +3012,7 @@ tbody.collapse.show {
     .navbar-toggleable-xl .navbar-nav .nav-link {
       padding-right: .5rem;
       padding-left: .5rem; }
-  .navbar-toggleable-xl > .container, .navbar-toggleable-xl > body {
+  .navbar-toggleable-xl > .container, .navbar-toggleable-xl > main {
     display: flex;
     flex-wrap: nowrap;
     align-items: center; }
