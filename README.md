@@ -55,5 +55,12 @@ sudo su -c "gem install sass"
  - if you want to modify the sass file to extend the CSS, then `sass --watch style.sass:style.css` in order to dinamically compile the `sass` file into `css` at each saving
  - open the html page and send messages;
  - launch the websoket client you want, it will send random pairs of numbers.
+ - open the node console to send messages to the server directy from the console:
+ ```node
+var s=require("sendtest")
+s.send({x:1, y:2})
+s.disable("input")
+s.enable("input")
+```
 
 The server will recieve messages from connected peers and it will dispatch these messages back, such as in an IM chat. The messages from the ws clients will appear as list items; the messages from the webpage will appear on the box.
