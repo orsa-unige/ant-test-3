@@ -98,20 +98,25 @@ ws.addEventListener("message", function(e) {
 	break;
 
     case "telescope_observer":
+	$("div").prepend(JSON.stringify(obj)+'<br>')	
  	// $("h2 em").text(obj.actor.title) /// it will change depends from the actor
  	// $("h2 em").text(obj.connection.id) /// it will change depends from the actor
 	// $("aside").text(obj.actor.description)    	
-	$("div").prepend(JSON.stringify(obj)+'<br>')
-	
 	break;
-	
+
+    case "console":
+        if (obj.enable != undefined){
+            console.log("enable!!")
+            $(obj.enable).prop("disabled",false)
+        }        
+        if(obj.disable != undefined) {
+            console.log("disable!!!")
+            $(obj.disable).prop("disabled",true)
+        }
+        
     default: 
 	break;
     }
-    
-
-
-    
 
 });
 
