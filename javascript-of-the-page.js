@@ -105,6 +105,7 @@ ws.addEventListener("message", function(e) {
 	break;
 
     case "console":
+    	$("div").prepend(JSON.stringify(obj)+'<br>')	
         if (obj.enable != undefined){
             console.log("enable!!")
             $(obj.enable).prop("disabled",false)
