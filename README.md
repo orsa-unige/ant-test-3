@@ -47,15 +47,15 @@ On Debian-based distributions:
 sudo apt-get install ruby ruby-dev
 sudo su -c "gem install sass"
 ```
+- if you want to modify the sass file to extend the CSS, then `sass --watch style.sass:style.css` in order to dinamically compile the `sass` file into `css` at each saving
 
 # Launch the project
 
  - Launch the websocket server,
  - launch the webserver,
- - if you want to modify the sass file to extend the CSS, then `sass --watch style.sass:style.css` in order to dinamically compile the `sass` file into `css` at each saving
  - open the html page and send messages;
- - launch the websoket client you want, it will send random pairs of numbers.
- - open the node console to send messages to the server directy from the console:
+ - launch all the websocket client you want, they will send random pairs of numbers.
+ - open the node console to send messages to the server directy from the console, and to enable/disable page elements:
  ```node
 var s=require("sendtest")
 s.send({x:1, y:2})
