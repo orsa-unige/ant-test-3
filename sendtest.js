@@ -15,8 +15,8 @@ obj.actor.name="console";
 module.exports = {
 
     send: function(msg) {
-        
-        ws.send(JSON.stringify({...obj, ...msg}));
+        // send "msg" value in a "message"
+        ws.send(JSON.stringify({...obj, message:msg}));
         return this;
     },
 

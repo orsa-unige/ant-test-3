@@ -30,7 +30,7 @@ source ~/.nvm/nvm.sh
 # Clone this repository
 
 ```bash
-git clone https://github.com/vertighel/ant-test-3.git
+git clone https://github.com/orsa-unige/ant-test-3.git
 
 ```
 # Install missing modules
