@@ -57,10 +57,10 @@ sudo su -c "gem install sass"
  - launch all the websocket client you want, they will send random pairs of numbers.
  - open the node console to send messages to the server directy from the console, and to enable/disable page elements:
  ```node
-var s=require("sendtest")
+var s=require("./sendtest.js")
 s.send({x:1, y:2})
-s.disable("input")
-s.enable("input")
+s.disable("button")
+s.enable("button")
 ```
 
 The server will recieve messages from connected peers and it will dispatch these messages back, such as in an IM chat. The messages from the ws clients will appear as list items; the messages from the webpage will appear on the box.
